@@ -1,5 +1,4 @@
 
-````markdown
 # Grasping Pipeline Setup
 
 Compact setup guide for the grasping pipeline using:
