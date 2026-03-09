@@ -253,12 +253,24 @@ Before running the full pipeline, verify:
 ---
 
 ## Repositories
+This setup builds on the following open-source projects:
 
-* Robotiq: `https://github.com/ros-industrial-attic/robotiq`
-* IFRA_LinkAttacher: `https://github.com/IFRA-Cranfield/IFRA_LinkAttacher`
-* RealSense ROS: `https://github.com/realsenseai/realsense-ros`
-* Contact-GraspNet: `https://github.com/NVlabs/contact_graspnet`
-* UR ROS2 Driver: `https://github.com/UniversalRobots/Universal_Robots_ROS2_Driver`
-* YOLO ROS: `https://github.com/mgonzs13/yolo_ros`
+* **[Robotiq](https://github.com/ros-industrial-attic/robotiq)** 
+
+
+* **[Contact-GraspNet](https://github.com/NVlabs/contact_graspnet)** 
+
+
+* **[YOLO ROS](https://github.com/mgonzs13/yolo_ros)** 
+
+
+* **[IFRA-Cranfield ROS 2 Robotiq Gripper Driver](https://github.com/IFRA-Cranfield/IFRA_LinkAttacher)**  
+  Used to interface with the Robotiq 2F-140 gripper over Modbus TCP.
+
+* **[Universal Robots ROS 2 Driver (UR Driver)](https://github.com/UniversalRobots/Universal_Robots_ROS2_Driver)**  
+  Official driver for controlling UR3e (and other UR series) robots using ROS 2.
+
+* **[RealSense ROS 2 Wrapper (Intel)](https://github.com/realsenseai/realsense-ros)**  
+   For integrating Intel RealSense cameras (e.g., D415 or D435).
 
 
