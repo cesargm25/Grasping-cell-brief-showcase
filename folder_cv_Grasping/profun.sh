@@ -1,0 +1,1 @@
+ros2 launch yolo_bringup yolo.launch.py   model:=yolov8m-seg.pt   input_image_topic:=/camera/camera/color/image_raw   input_depth_topic:=/camera/camera/aligned_depth_to_color/image_raw   input_depth_info_topic:=/camera/camera/aligned_depth_to_color/camera_info   use_3d:=True   target_frame:=camera_color_optical_frame   device:=cpu
