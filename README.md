@@ -113,6 +113,7 @@ If changing the setup to GPU execution, do not keep the CPU version running at t
 ---
 
 ## Launch Sequence
+The commands to run the necessary lunch files are reduced into bash files for an easier operation. 
 
 ### A. Test Docker
 
@@ -255,13 +256,16 @@ Before running the full pipeline, verify:
 ## Repositories
 This setup builds on the following open-source projects:
 
-* **[Robotiq](https://github.com/ros-industrial-attic/robotiq)** 
+* **[Robotiq](https://github.com/ros-industrial-attic/robotiq)**
+  for getting the geometry of the Gripper
+
+  
+* **[Contact-GraspNet](https://github.com/NVlabs/contact_graspnet)**
+  Grasping dataset and grasping pose
 
 
-* **[Contact-GraspNet](https://github.com/NVlabs/contact_graspnet)** 
-
-
-* **[YOLO ROS](https://github.com/mgonzs13/yolo_ros)** 
+* **[YOLO ROS](https://github.com/mgonzs13/yolo_ros)**
+  Used for segmentation and classification 
 
 
 * **[IFRA-Cranfield ROS 2 Robotiq Gripper Driver](https://github.com/IFRA-Cranfield/IFRA_LinkAttacher)**  
