@@ -23,6 +23,20 @@ This pipeline uses:
 - **Robotiq repo** for gripper support
 - **custom TF / pose scripts** to connect camera and grasp frames
 
+The project consist of two docker images **Computer_Vision_Docker** and **Grasping_Docker**
+both containers need to be build, with the following commnad. 
+
+```bash
+./build_docker.sh
+````
+Within each docker, there is a shared folder with the computer called ws_moveit, in which we have all the ros packages necessary (check the dependecies section). 
+
+The following modification need to be made:
+* add **urdf**  and **meshes** files into ur_description package (this one belong to **Universal_Robots_ROS2_Driver**)
+
+* Add **ur_moveit_tools** package into the ws_moveit work space, and then build work space. 
+  
+
 ---
 
 ## Main Notes
@@ -176,6 +190,7 @@ ros2 run tf2_ros static_transform_publisher 0 0 0 3.14159265 0 0 camera_mount_bl
 ```bash
 python3 tfpose.py
 ```
+Python testing code is used for object detection, pose estimation, and segmentation. This is not inside a ROS package yet, since it is easier to prototype without it. 
 
 > Note: `tfpose.py` is not yet inside a ROS2 package.
 > It should be converted into a proper ROS2 node inside a package.
@@ -246,10 +261,9 @@ Before running the full pipeline, verify:
 ## Pending Improvements
 
 * Move `tfpose.py` into a ROS2 package as a node
-* Move camera frame setup into URDF if possible
 * unify launch scripts into one launch file
 * document Contact-GraspNet input topic / interface more clearly
-* define CPU vs GPU execution in a cleaner way
+* modify computer vision commnads into GPU execution in a cleaner way
 
 ---
 
